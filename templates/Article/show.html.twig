@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Détail de l'article</h1>
+    <div class="articleWrap" >
+    <p>{{ article.Titre }}</p>
+    <p>{{ article.Description }}</p>
+    <p>{{ article.Auteur }}</p>
+    <p>Catégorie: {{ categorie.Libelle }} <span class="{{ categorie.Icon }}"></span></p>
+        <div class="buttonWrap" >
+            <p class="button"><a href="/article/update/{{ article.Id }}"> Modifier </a></p>
+            <p class="button"><a href="/article/delete/{{ article.Id }}"> Supprimer </a></p>
+        </div>
+    </div>
+
+    <div>
+        <h5>commentaires: </h5>
+
+          <p>Ajouter un commentaire</p>
+            <form method="post" >
+                <input type="text" name="Corps" placeholder="Commentaire">
+                <input type="text" name="Auteur" placeholder="Auteur">
+                <input type="text" name="Mail" placeholder="Mail">
+                <input type="submit" value="Commenter">
+            </form>
+        {% for commentaire in commentaires %}
+            <div class="commentaire" >
+                <div class="details" >
+                    <div class="auteur" >
+                        <p class="user name">{{commentaire.Auteur}}</p>
+                        <p class="user mail">{{commentaire.Mail}}</p>
+                    </div>
+                    <p>{{commentaire.Date}}</p>
+                </div>
+                <div class="corps">
+                    <p>{{commentaire.Corps}}</p>
+                </div>
+                <p class="button"><a href="/commentaire/update/{{commentaire.Id}}" >Modifier</a></p>
+                <p class="button"><a href="/commentaire/delete/{{commentaire.Id}}" >Supprimer</a></p>
+            </div>
+        {% endfor %}
+          
+    </div>
+{% endblock %}
+

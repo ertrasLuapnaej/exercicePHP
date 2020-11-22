@@ -1,0 +1,65 @@
+.articleWrap{
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem ;
+}
+
+.buttonWrap{
+    display: flex;
+}
+
+.button{
+    text-decoration: none;
+    background-color: #f0f2ff;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    margin: 0 0.5rem 0 0;
+}
+
+
+
+
+
+
+
+.commentaire{
+    background-color: #f5f5f5;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    width: fit-content;
+}
+.commentaire > p{
+margin: 0;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color:#888888;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    margin: 0 0.5rem 0 0;
+  /*   padding: 0 0 0.5rem 0; */
+}
+
+.auteur{
+    margin: 0 0.5rem 0 0 ;
+}
+.user{
+    margin: 0 0 0.5rem 0  ;
+}
+.name{
+    font-size: 12px;
+    font-weight: bold;
+    color:#313131;
+}
+
+.corps{
+    margin: 1rem 0 0 0 ;
+}

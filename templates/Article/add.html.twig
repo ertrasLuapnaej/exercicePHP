@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Ajout de l'article :</h1>
+    <form method="post">
+        <input type="text" name="Titre">
+        <textarea name="Description">
+        </textarea>
+        <input type="date" name="DateAjout" >
+        <select name="Auteur">
+            <option >Rebecca</option>
+            <option >Alexandre</option>
+            <option >Emilie</option>
+            <option>Léo</option>
+            <option >Aegir</option>
+        </select>
+        <select name="categorie">
+            {% for categorie in categorieList %}
+                <option value="{{ categorie.Id }}">{{ categorie.Libelle }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Enregistrer les modifications">
+    </form>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Commentaires</h1>
+    <p>{{ commentaire.Auteur }}</p>
+    <p>{{ commentaire.Mail }}</p>
+    <p>{{ commentaire.Corps }}</p>
+    <p>{{ commentaire.Date }}</p>
+
+    <p><a href="/commentaire/update/{{ commentaire.Id }}"> Modifier ce superbe commentaire </a></p>
+    <p><a href="/commentaire/delete/{{ commentaire.Id }}"> Supprimer ce superbe commentaire </a></p>
+{% endblock %}

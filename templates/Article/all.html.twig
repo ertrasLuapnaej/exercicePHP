@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    Liste article >> {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <h1>Voici la liste des articles</h1>
+    <div class="row">
+    {% for article in articleList %}
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.Titre }}</h5>
+                    {# Ceci est un commentaire qui ne sera pas visible sur le code HTML #}
+                    <p class="card-text">
+                        {{ article.getShortDesc(3) }}
+                        <br/>
+                        Ecrit le {{ article.DateAjout|date("d/m/Y") }}
+                    </p>
+                    <a href="/Article/Show/{{ article.Id }}" class="btn btn-primary">
+                        Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

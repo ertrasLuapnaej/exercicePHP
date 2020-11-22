@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<h2>Ajouter un commentaire</h2>
+<form method="post" >
+    <input type="text" name="Corps" placeholder="Commentaire">
+    <input type="text" name="Auteur" placeholder="Auteur">
+    <input type="text" name="Mail" placeholder="Mail">
+    <input type="submit" value="Commenter">
+</form>
+{% endblock %}

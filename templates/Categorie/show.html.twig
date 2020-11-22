@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Détail de la catérogie</h1>
+    <p>{{ categorie.Libelle }}</p>
+    <p>{{ categorie.Icon }}</p>
+
+    <p><a href="/categorie/update/{{ categorie.Id }}"> Modifier cette superbe Catégorie </a></p>
+    <p><a href="/categorie/delete/{{ categorie.Id }}"> Supprimer cette superbe Catégorie </a></p>
+{% endblock %}
